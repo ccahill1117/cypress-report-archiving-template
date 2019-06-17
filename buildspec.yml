@@ -1,0 +1,43 @@
+version: 0.2
+env:
+  variables:
+    # testEnvVar: <%= process.env.VUE_APP_TITLE %>
+#     key: "value"
+#   parameter-store:
+#     key: "value"
+#     key: "value"
+  git-credential-helper: yes
+phases:
+  install:
+    runtime-versions:
+      nodejs: 8
+      # name: version
+    commands:
+      # - echo $testEnvVar
+      - echo "building this job from buildspec in root directory"
+      - npm install
+      - apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 xvfb
+      # - command
+  #pre_build:
+    #commands:
+      # - command
+      # - command
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - npm run ci
+      - aws s3 mv mochawesome-report s3://admin-ui-tests-bucket/reports/dev-admin-ui/$(date +"%Y%m%d-%H%M") --recursive
+      # - aws s3 mv mochawesome-report s3://admin-ui-tests-bucket/reports/$(date +"%Y%m%d-%H%M") --recursive
+
+artifacts:
+  files:
+    - index.html
+    - assets/**/*
+    - css/*
+    - js/*
+  base-directory: dist
+#cache:
+  #paths:
+    # - paths

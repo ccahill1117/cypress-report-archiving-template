@@ -1,19 +1,14 @@
 {
-  "name": "cypress-report-archiving-template",
-  "short_name": "cypress-report-archiving-template",
+  "name": "christophercahill.co",
+  "short_name": "christophercahill.co",
   "icons": [
     {
-      "src": "/public/favicon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/public/icons/android-chrome-192x192.png",
+      "src": "./img/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/android-chrome-512x512.png",
+      "src": "./img/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

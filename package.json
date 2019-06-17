@@ -5,13 +5,27 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "node cypress/plugins/index.js && node scripts/cypress_aws.js $EMAIL $PASS",
+    "ci": "start-server-and-test start-server http://localhost:8080 test",
+    "e2e": "vue-cli-service e2e",
+    "cypress-run": "cypress run",
+    "cypress-mac": "$(npm bin)/cypress open",
+    "cypress-windows": "cypress open",
+    "cy:run": "node scripts/cypress_local.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "cypress": "^3.3.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.2",
+    "mochawesome-merge": "^1.0.7",
+    "mochawesome-report-generator": "^3.1.5",
+    "start-server-and-test": "^1.9.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
