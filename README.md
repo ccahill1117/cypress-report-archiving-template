@@ -9,8 +9,6 @@
 > Using the packages included below, after the tests run, a compiled .html report is generated and moved to an s3 bucket with a timestamped directory -- so that the user can later find 
 
 
-
-
 ## Packages this project uses: 
 
 * "cypress": "^3.3.0"
@@ -20,13 +18,13 @@
 *  "mochawesome-report-generator": "^3.1.5"
 *  "start-server-and-test": "^1.9.0"
 
-## Further work/improvements
+## Further work/improvements :
 
 #### Persist .git metadata
 * Strangely, AWS CodePipeline loses .git metadata when the project is moved from CodeSource --> CodeBuild. [See this AWS discussion](https://forums.aws.amazon.com/thread.jspa?threadID=244197) The next improvement to this project would be to programmatically generate the buildspec.yml file before the project is pushed to github.
 
 #### Test result visualization/database
-* After writing a lot of e2e tests, I noticed that sometimes certain web application functionality tended to fail more often than others for reasons that I could not always determine. (i.e. certain GET/PUT requests) However, building a database of tests where tests are identified by specific IDs, could really give developers a nice overview of where things tend to fail/succeed more often -- and then give some guidance as to where engineers need to drill down and improve their codebase.
+* After writing more and more e2e tests, I noticed that certain components of a web application tended to fail tests more often than others. (i.e. certain HTTPS requests, etc.) However, building a database of tests where tests are identified by specific IDs, could really give developers a nice overview of where things tend to fail/succeed more often -- and then give some guidance as to where engineers need to drill down and improve their codebase.
 
 ### Clone this project and serve locally
 ```
@@ -36,3 +34,4 @@ $ npm run serve
 
 ```
 
+### 
