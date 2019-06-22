@@ -1,43 +1,46 @@
 version: 0.2
 env:
   variables:
-    # testEnvVar: <%= process.env.VUE_APP_TITLE %>
-#     key: "value"
-#   parameter-store:
-#     key: "value"
-#     key: "value"
-  git-credential-helper: yes
+    DESTINATION: 2019-06-22_16-03_adds_photos_and_writeBuildspec_js
+    REPORT_URL: >-
+      https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/2019-06-22_16-03_adds_photos_and_writeBuildspec_js/mochawesome.html
 phases:
   install:
     runtime-versions:
       nodejs: 8
-      # name: version
     commands:
-      # - echo $testEnvVar
-      - echo "building this job from buildspec in root directory"
+      - echo $DESTINATION
+      - echo $REPORT_URL
+      - echo "building this job from programmatically generated buildspec.yml!"
       - npm install
-      - apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 xvfb
-      # - command
-  #pre_build:
-    #commands:
-      # - command
-      # - command
+      - >-
+        apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
+        libxss1 libasound2 xvfb
+      - echo this is last commitMessage ==> adds_photos_and_writeBuildspec_js
   build:
     commands:
       - npm run build
   post_build:
     commands:
       - npm run ci
-      - aws s3 mv mochawesome-report s3://admin-ui-tests-bucket/reports/dev-admin-ui/$(date +"%Y%m%d-%H%M") --recursive
-      # - aws s3 mv mochawesome-report s3://admin-ui-tests-bucket/reports/$(date +"%Y%m%d-%H%M") --recursive
-
+      - >-
+        aws s3 mv mochawesome-report
+        s3://admin-ui-tests-bucket/reports/dev-admin-ui/2019-06-22_16-03_adds_photos_and_writeBuildspec_js
+        --recursive
+      - >-
+        aws sns publish --topic-arn
+        arn:aws:sns:us-east-1:213585113823:cypressTestBuildNotification
+        --subject "Admin-UI CodeBuild Tests
+        2019-06-22_16-03_adds_photos_and_writeBuildspec_js" --message "Admin-UI
+        CodeBuild tests have completed for last commit message :
+        adds_photos_and_writeBuildspec_js . Follow link here to report results
+        : 
+        https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/2019-06-22_16-03_adds_photos_and_writeBuildspec_js/mochawesome.html"
 artifacts:
   files:
     - index.html
     - assets/**/*
     - css/*
     - js/*
+    - fonts/*
   base-directory: dist
-#cache:
-  #paths:
-    # - paths
