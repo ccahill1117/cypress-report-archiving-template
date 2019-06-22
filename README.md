@@ -3,10 +3,10 @@
 ## What is this project?
 
 > This project is a walkthrough and open-source template that (hoepfully) can help you get started quickly to :
-* Launch and deploy a web application
-* Write tests for your web application
-* Save your e2e tests as reports
-* Send you notifications when your tests have finished
+* Launch and deploy a web application (AWS CodePipeline)
+* Write tests for your web application (Cypress)
+* Save your e2e tests as reports (Mochawesome)
+* Send you notifications when your tests have finished (AWS SNS)
 
 ## About this project
 
