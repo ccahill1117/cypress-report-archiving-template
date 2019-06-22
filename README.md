@@ -2,7 +2,7 @@
 
 ## What is this project?
 
-> This project is a walkthrough and open-source template that (hoepfully) can help you get started quickly to :
+> This project is a walkthrough and open-source template that can help you get started quickly to :
 * Launch and deploy a web application (AWS CodePipeline)
 * Write tests for your web application (Cypress)
 * Save your e2e tests as reports (Mochawesome)
