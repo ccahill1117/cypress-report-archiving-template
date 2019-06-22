@@ -1,5 +1,13 @@
 # cypress-reporting Vue.JS template
 
+## What is this project?
+
+> This project is a walkthrough and open-source template that (hoepfully) can help you get started quickly to :
+* Launch and deploy a web application
+* Write tests for your web application
+* Save your e2e tests as reports
+* Send you notifications when your tests have finished
+
 ## About this project
 
 > I developed this project over the course of an internship with M Science LLC, from Mar-2019 to Jun-2019. My mentor, Joe Taylor (Lead UI/UX Architect), and I were interested in creating an archive of e2e test reports, based around the Cypress testing framework. 
