@@ -15,7 +15,7 @@
             This project is a walkthrough and open-source template that can help you get started quickly to: 
           </p>          
           <h2>
-            Launch and deploy a web application (AWS CodePipeline)
+            Launch and deploy a web application (AWS CodePipeline, S3, Route 53, CloudFront)
           </h2>
           
           <h2>

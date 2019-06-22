@@ -5,14 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "node cypress/plugins/index.js && node scripts/cypress_aws.js $EMAIL $PASS",
+    "test": "node scripts/cypress_aws.js $EMAIL $PASS $DESTINATION",
+    "ci": "start-server-and-test start-server http://localhost:8080 test",
     "e2e": "vue-cli-service e2e",
     "lint": "vue-cli-service lint",
-    "ci": "start-server-and-test start-server http://localhost:8080 test",
-    "cy:run": "node scripts/cypress_local.js",
-    "cypress-mac": "$(npm bin)/cypress open",
     "cypress-run": "cypress run",
-    "cypress-windows": "cypress open"
+    "cypress-mac": "$(npm bin)/cypress open",
+    "cypress-windows": "cypress open",
+    "cy:run": "node scripts/cypress_local.js",
+    "git": "node scripts/writeBuildspec.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -22,11 +23,13 @@
     "mochawesome-merge": "^1.0.7",
     "mochawesome-report-generator": "^3.1.5",
     "register-service-worker": "^1.6.2",
+    "simple-git": "^1.116.0",
     "start-server-and-test": "^1.9.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuetify": "^1.5.5",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "write-yaml": "^1.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",

@@ -16,6 +16,6 @@ export default new Router({
       path: '/p1',
       name: 'githubWebhooks',
       component: p1
-    },
+    }
   ]
 })

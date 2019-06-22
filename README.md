@@ -19,7 +19,7 @@
 
 ## Packages this project uses: 
 
-* "cypress": "^3.3.0"
+*  "cypress": "^3.3.0"
 *  "mocha": "^5.2.0"
 *  "mochawesome": "^3.1.2"
 *  "mochawesome-merge": "^1.0.7"
