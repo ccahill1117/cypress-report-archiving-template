@@ -14,8 +14,7 @@
 
 > The overall goal of the project was to integrate the testing into our CI/CD pipeline (AWS Codepipeline). This was accomplished by adding a buildspec.yml file into the root directory of this project. The buildpsec file installs the necessary dependencies on the virtual CodeBuild instance so that the cypress tests can be executed in the cloud.
 
-> Using the packages included below, after the tests run, a compiled .html report is generated and moved to an s3 bucket with a timestamped directory -- so that the user can later find 
-
+> Using the packages included below, after the tests run, a compiled .html report is generated and moved to an s3 bucket with a timestamped directory. Additionally an Amazon SNS message is sent to the necessary subscribers, with a link to the s3 bucket, so that the user can later find the report.
 
 ## Packages this project uses: 
 
