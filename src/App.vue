@@ -21,15 +21,15 @@
             <v-icon>control_camera</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Github, Webhooks, Pipeline</v-list-tile-title>
+            <v-list-tile-title>Nameservers, Route 53</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+        <v-list-tile @click="" href="/#/p2">
           <v-list-tile-action>
             <v-icon>local_drink</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>S3</v-list-tile-title>
+            <v-list-tile-title>Github, Webhooks, Pipeline</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">
@@ -72,12 +72,14 @@
 <script>
 import p0 from './components/p0'
 import p1 from './components/p1'
+import p2 from './components/p2'
 
 export default {
   name: 'App',
   components: {
     p0,
     p1,
+    p2
   },
   data () {
     return {

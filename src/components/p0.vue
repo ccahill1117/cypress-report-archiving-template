@@ -4,7 +4,6 @@
       text-xs-center
       wrap
     >
-
       <v-card class="outlineText">
         <img
           src="/img/cypressLogo.png"
@@ -17,18 +16,19 @@
           <h2>
             Launch and deploy a web application (AWS CodePipeline, S3, Route 53, CloudFront)
           </h2>
-          
+          <hr>
           <h2>
             Write tests for your web application (Cypress.io)
           </h2>
-                      
+          <hr>
           <h2>
             Archive your e2e tests as reports (Mochawesome suite)
           </h2>
-          
+          <hr>          
           <h2>
             Send notification that tests have been run in AWS CodeBuild environment with hyperlink to where the tests have been stored (AWS SNS)
           </h2>
+          <hr>
           <p class="cardText">
             You can follow along on the navigation drawer (left side of screen) to complete this walkthrough!
           </p>  
