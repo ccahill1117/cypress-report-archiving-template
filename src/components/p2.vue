@@ -134,12 +134,15 @@
   <div>
     <v-card>
       <v-card-text class="p0card">
-        <p>2.15 - Add Deploy Stage</p>
-        <p></p>
+        <p>2.15 - Add Deploy Stage - For your deploy provider, select Amazon S3</p>
+        <p>For your bucket, select the bucket you created back in <strong>section 2.4.</strong></p>
+        <p>Create an S3 Object Key -- I just called mine 'key'</p>
+        <p>Click "Next", and confirm all details on the following page.</p>
         <img src="img/Screen Shot 2019-06-26 at 4.26.42 PM.png" width=1000>
       </v-card-text>
     </v-card>
   </div>
+  
 
 </div>
 </template>
