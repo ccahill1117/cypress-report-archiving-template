@@ -3,7 +3,7 @@ const moment = require('moment')
 const theDate = moment().format('YYYY-MM-DD_HH-mm')
 const commitMsg = process.argv[2].split(' ').join('_')
 const destinationURL = theDate + "_" + commitMsg
-const reportURL = `https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/${theDate+"_"+commitMsg}/mochawesome.html`
+const reportURL = `https://admin-ui-tests-bucket.s3.amazonaws.com/${theDate+"_"+commitMsg}/mochawesome.html`
 
 var data = {
     version: 0.2,
@@ -56,6 +56,6 @@ yaml('buildspec.yml', data, function(err) {
   //if you want to add err msg, etc you can do so here...
 });
 
-require('simple-git')()
+require('simple-git') ()
     .add('./*')
     .commit(commitMsg)
