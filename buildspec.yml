@@ -27,12 +27,8 @@ phases:
         aws s3 mv mochawesome-report
         s3://testresultscypress/2019-06-27_12-14_update_s3_bucket --recursive
       - >-
-        aws sns publish --topic-arn
-        arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests 2019-06-27_12-14_update_s3_bucket" --message "CodeBuild
-        tests have completed for last commit message : update_s3_bucket . Follow
-        link here to report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-06-27_12-14_update_s3_bucket/mochawesome.html"
+        aws sns publish --topic-arn arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
+        "CodeBuild Tests 2019-06-27_12-14_update_s3_bucket" --message "CodeBuild tests have completed for last commit message : update_s3_bucket . Follow link here to report results: https://testresultscypress.s3.amazonaws.com/2019-06-27_12-14_update_s3_bucket/mochawesome.html"
 artifacts:
   files:
     - index.html
