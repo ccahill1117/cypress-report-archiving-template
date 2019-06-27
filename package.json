@@ -5,8 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "start-server": "npm start",
     "test": "node scripts/cypress_aws.js $EMAIL $PASS $DESTINATION",
-    "ci": "start-server-and-test http://localhost:8080 test",
+    "ci": "start-server-and-test start-server http://localhost:8080 test",
     "e2e": "vue-cli-service e2e",
     "lint": "vue-cli-service lint",
     "cypress-run": "cypress run",
