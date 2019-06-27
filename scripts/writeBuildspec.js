@@ -3,7 +3,7 @@ const moment = require('moment')
 const theDate = moment().format('YYYY-MM-DD_HH-mm')
 const commitMsg = process.argv[2].split(' ').join('_')
 const destinationURL = theDate + "_" + commitMsg
-const testResultsBucket = 'cypresstestresults'
+const testResultsBucket = 'testresultscypress'
 const snsTopic = 'arn:aws:sns:us-west-2:422539116740:cypressnotification'
 const reportURL = `https://${testResultsBucket}.s3.amazonaws.com/${theDate+"_"+commitMsg}/mochawesome.html`
 
