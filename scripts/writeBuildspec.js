@@ -3,7 +3,10 @@ const moment = require('moment')
 const theDate = moment().format('YYYY-MM-DD_HH-mm')
 const commitMsg = process.argv[2].split(' ').join('_')
 const destinationURL = theDate + "_" + commitMsg
-const reportURL = `https://cypresstestresults.s3.amazonaws.com/${theDate+"_"+commitMsg}/mochawesome.html`
+const testResultsBucket = 'TEST RESULT BUCKET HERE'
+const snsTopic = 'SNS TOPIC HERE'
+const reportURL = `https://${testResultsBucket}.s3.amazonaws.com/${theDate+"_"+commitMsg}/mochawesome.html`
+
 
 var data = {
     version: 0.2,
@@ -35,8 +38,8 @@ var data = {
         'post_build': {
             commands: [
                 `npm run ci`,
-                `aws s3 mv mochawesome-report s3://admin-ui-tests-bucket/reports/dev-admin-ui/${theDate+"_"+commitMsg} --recursive`,
-                `aws sns publish --topic-arn arn:aws:sns:us-east-1:213585113823:cypressTestBuildNotification --subject "Admin-UI CodeBuild Tests ${theDate+"_"+commitMsg}" --message "Admin-UI CodeBuild tests have completed for last commit message : ${commitMsg} . Follow link here to report results :  https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/${destinationURL}/mochawesome.html"`
+                `aws s3 mv mochawesome-report s3://${testResultsBucket}/${theDate+"_"+commitMsg} --recursive`,
+                `aws sns publish --topic-arn ${snsTopic} --subject "CodeBuild Tests ${theDate+"_"+commitMsg}" --message "CodeBuild tests have completed for last commit message : ${commitMsg} . Follow link here to report results :  https://${testResultsBucket}.s3.amazonaws.com/${destinationURL}/mochawesome.html"`
             ]
         }
     },

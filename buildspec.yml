@@ -1,9 +1,10 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-27_10-10_reize_photos_with_class
+    DESTINATION: 2019-06-27_10-26_update_writeBuildspec.js
     REPORT_URL: >-
-      https://cypresstestresults.s3.amazonaws.com/2019-06-27_10-10_reize_photos_with_class/mochawesome.html
+      https://TEST RESULT BUCKET
+      HERE.s3.amazonaws.com/2019-06-27_10-26_update_writeBuildspec.js/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,7 +17,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> reize_photos_with_class
+      - echo this is last commitMessage ==> update_writeBuildspec.js
   build:
     commands:
       - npm run build
@@ -24,17 +25,14 @@ phases:
     commands:
       - npm run ci
       - >-
-        aws s3 mv mochawesome-report
-        s3://admin-ui-tests-bucket/reports/dev-admin-ui/2019-06-27_10-10_reize_photos_with_class
-        --recursive
+        aws s3 mv mochawesome-report s3://TEST RESULT BUCKET
+        HERE/2019-06-27_10-26_update_writeBuildspec.js --recursive
       - >-
-        aws sns publish --topic-arn
-        arn:aws:sns:us-east-1:213585113823:cypressTestBuildNotification
-        --subject "Admin-UI CodeBuild Tests
-        2019-06-27_10-10_reize_photos_with_class" --message "Admin-UI CodeBuild
-        tests have completed for last commit message : reize_photos_with_class .
-        Follow link here to report results : 
-        https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/2019-06-27_10-10_reize_photos_with_class/mochawesome.html"
+        aws sns publish --topic-arn SNS TOPIC HERE --subject "CodeBuild Tests
+        2019-06-27_10-26_update_writeBuildspec.js" --message "CodeBuild tests
+        have completed for last commit message : update_writeBuildspec.js .
+        Follow link here to report results :  https://TEST RESULT BUCKET
+        HERE.s3.amazonaws.com/2019-06-27_10-26_update_writeBuildspec.js/mochawesome.html"
 artifacts:
   files:
     - index.html
