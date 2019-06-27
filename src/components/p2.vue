@@ -26,6 +26,8 @@
     <v-card>
       <v-card-text class="p0card">
         <p>2.4 - Log into your AWS account and navigate to S3. Here we are going to create a bucket where we will host our project.</p>
+        <p>To save yourself some trouble later on, make sure that your AWS console displays whichever geographic region makes sense for where you are located -- and when you are asked to pick a region in future steps, make sure you keep that consistent.</p>
+        <img src="img/Screen Shot 2019-06-27 at 11.00.11 AM.png" class=walkthroughPix>
         <p>At this point, just give the bucket a name (see pic below) and click create. For the purposes of this project, we will keep our bucket private, and then add a bucket policy later.</p>
         <p>Pay attention to what region your bucket is in - you will want to make sure your CodePipeline jobs, buckets, and other AWS resources are located in the same region.</p>
         <img src="img/Screen Shot 2019-06-26 at 3.18.16 PM.png" class=walkthroughPix>

@@ -1,10 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-27_10-46_update_pre1
+    DESTINATION: 2019-06-27_11-25_update_sns_and_s3_bucket_info
     REPORT_URL: >-
-      https://TEST RESULT BUCKET
-      HERE.s3.amazonaws.com/2019-06-27_10-46_update_pre1/mochawesome.html
+      https://cypresstestresults.s3.amazonaws.com/2019-06-27_11-25_update_sns_and_s3_bucket_info/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -17,7 +16,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> update_pre1
+      - echo this is last commitMessage ==> update_sns_and_s3_bucket_info
   build:
     commands:
       - npm run build
@@ -25,14 +24,16 @@ phases:
     commands:
       - npm run ci
       - >-
-        aws s3 mv mochawesome-report s3://TEST RESULT BUCKET
-        HERE/2019-06-27_10-46_update_pre1 --recursive
+        aws s3 mv mochawesome-report
+        s3://cypresstestresults/2019-06-27_11-25_update_sns_and_s3_bucket_info
+        --recursive
       - >-
-        aws sns publish --topic-arn SNS TOPIC HERE --subject "CodeBuild Tests
-        2019-06-27_10-46_update_pre1" --message "CodeBuild tests have completed
-        for last commit message : update_pre1 . Follow link here to report
-        results :  https://TEST RESULT BUCKET
-        HERE.s3.amazonaws.com/2019-06-27_10-46_update_pre1/mochawesome.html"
+        aws sns publish --topic-arn
+        arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
+        "CodeBuild Tests 2019-06-27_11-25_update_sns_and_s3_bucket_info"
+        --message "CodeBuild tests have completed for last commit message :
+        update_sns_and_s3_bucket_info . Follow link here to report results : 
+        https://cypresstestresults.s3.amazonaws.com/2019-06-27_11-25_update_sns_and_s3_bucket_info/mochawesome.html"
 artifacts:
   files:
     - index.html
