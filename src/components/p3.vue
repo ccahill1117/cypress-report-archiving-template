@@ -43,12 +43,79 @@
                       "Effect": "Allow",
                       "Principal": "*",
                       "Action": "s3:GetObject",
-                      "Resource": "arn:aws:s3:::YOURBUCKETNAME/*"
+                      "Resource": "arn:aws:s3:::YOURBUCKETNAME/*"     
                   }
               ]
           }
         </code>
+        <p></p>
+        <p>Below is how the Bucket Policy should look.</p>
         <img src="img/Screen Shot 2019-06-27 at 2.58.10 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+    <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.5 - Next navigate to the Simple Subscription Service (SNS) console in AWS. <a href="https://us-west-2.console.aws.amazon.com/sns/v3/">You can click here.</a></p>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.6 - Once in the SNS console, click "Create topic".</p>  
+        <img src="img/Screen Shot 2019-06-27 at 3.18.34 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.7 - Next, just give your Topic a name that is easy to remember, then scroll down and click "Create topic." </p>  
+        <img src="img/Screen Shot 2019-06-27 at 4.41.53 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.8 - After your topic has been created, click on "Subscriptions" in the left hand navigation drawer.</p>  
+        <img src="img/Screen Shot 2019-06-27 at 4.43.15 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.9 - At the "Subscriptions" console, click "Create Subscription".</p>  
+        <img src="img/Screen Shot 2019-06-27 at 4.44.48 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.10 - On the Subscription creation screen, just click into the Topic ARN box, and click on the ARN of the SNS Topic you created in 3.7.</p>
+        <p>For "protocol" pick Email</p>
+        <p>For "endpoint" type in your e-mail address.</p>  
+        <img src="img/Screen Shot 2019-06-27 at 4.46.59 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.11 - You should quickly receive an e-mail, asking you to confirm your subscription, and once you do that, you can navigate back to your SNS Topic (i.e. myCypressTopic) and you will see that your subscription is all confirmed.</p>  
+        <img src="img/Screen Shot 2019-06-27 at 4.49.38 PM.png" class=walkthroughPix>       
+        <p></p>
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>In the next section, we'll create an IAM Policy for our AWS CodeBuild job so that our AWS CodeBuild (earlier named CypressTestBuild @ 2.9) can access the S3 bucket (to put the reports there) and access the SNS topic we just made (to send alert emails).</p>
       </v-card-text>
     </v-card>
   </div>

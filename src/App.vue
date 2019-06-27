@@ -45,15 +45,15 @@
             <v-icon>speaker_phone</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Service roles and more</v-list-tile-title>
+            <v-list-tile-title>Target Bucket and SNS</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+        <v-list-tile @click="" href="/#/p4">
           <v-list-tile-action>
             <v-icon>people_outline</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>About!</v-list-tile-title>
+            <v-list-tile-title>Creating A Service Role</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">

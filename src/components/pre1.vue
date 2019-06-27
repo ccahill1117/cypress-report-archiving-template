@@ -3,7 +3,7 @@
   <div>
     <v-card>
       <v-card-text class="p0card">
-        <p>This cypress testing template and walkthrough can help you launch a basic web application and running cypess tests in the AWS CodeBuild environment.</p>
+        <p>This template and walkthrough can help you launch a basic web application and running cypess tests in the AWS CodeBuild environment.</p>
         <p>Additionally, this repository uses some custom scripting (scripts/writeBuildspec.js) which programmatically generates a new buildspec.yml file in the root directory everytime a user runs the command <code>$ npm run git "YOUR COMMIT MESSAGE HERE"</code>, where you put your commit message in quotes.</p>
       </v-card-text>
     </v-card>
