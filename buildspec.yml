@@ -1,0 +1,45 @@
+version: 0.2
+env:
+  variables:
+    DESTINATION: 2019-06-27_07-50_all_should_be_updated
+    REPORT_URL: >-
+      https://cypresstestresults.s3.amazonaws.com/2019-06-27_07-50_all_should_be_updated/mochawesome.html
+phases:
+  install:
+    runtime-versions:
+      nodejs: 8
+    commands:
+      - echo $DESTINATION
+      - echo $REPORT_URL
+      - echo "building this job from programmatically generated buildspec.yml!"
+      - npm install
+      - >-
+        apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
+        libxss1 libasound2 xvfb
+      - echo this is last commitMessage ==> all_should_be_updated
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - npm run ci
+      - >-
+        aws s3 mv mochawesome-report
+        s3://admin-ui-tests-bucket/reports/dev-admin-ui/2019-06-27_07-50_all_should_be_updated
+        --recursive
+      - >-
+        aws sns publish --topic-arn
+        arn:aws:sns:us-east-1:213585113823:cypressTestBuildNotification
+        --subject "Admin-UI CodeBuild Tests
+        2019-06-27_07-50_all_should_be_updated" --message "Admin-UI CodeBuild
+        tests have completed for last commit message : all_should_be_updated .
+        Follow link here to report results : 
+        https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/2019-06-27_07-50_all_should_be_updated/mochawesome.html"
+artifacts:
+  files:
+    - index.html
+    - assets/**/*
+    - css/*
+    - js/*
+    - fonts/*
+  base-directory: dist

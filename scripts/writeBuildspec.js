@@ -58,4 +58,5 @@ yaml('buildspec.yml', data, function(err) {
 
 require('simple-git') ()
     .add('./*')
+    .add('./buildspec.yml')
     .commit(commitMsg)
