@@ -16,6 +16,14 @@
             <v-list-tile-title>Outline</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile @click="" href="/#/pre-1">
+          <v-list-tile-action>
+            <v-icon>format_list_numbered_rtl</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>This template, and what to do with it</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
         <v-list-tile @click="" href="/#/p1">
           <v-list-tile-action>
             <v-icon>control_camera</v-icon>
@@ -30,6 +38,14 @@
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Github, Webhooks, Pipeline</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile @click="" href="/#/p3">
+          <v-list-tile-action>
+            <v-icon>speaker_phone</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Service roles and more</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">
@@ -73,13 +89,15 @@
 import p0 from './components/p0'
 import p1 from './components/p1'
 import p2 from './components/p2'
+import p3 from './components/p3'
 
 export default {
   name: 'App',
   components: {
     p0,
     p1,
-    p2
+    p2,
+    p3
   },
   data () {
     return {

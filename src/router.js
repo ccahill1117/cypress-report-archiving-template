@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import p0 from './components/p0'
 import p1 from './components/p1'
 import p2 from './components/p2'
+import p3 from './components/p3'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/p2',
       name: 's3',
       component: p2
+    },
+    {
+      path: '/p3',
+      name: 's3',
+      component: p3
     }
   ]
 })
