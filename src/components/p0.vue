@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container data-cy="v-container">
     <v-layout
       text-xs-center
       wrap
