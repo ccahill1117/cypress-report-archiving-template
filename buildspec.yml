@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-27_07-50_all_should_be_updated
+    DESTINATION: 2019-06-27_07-55_start_server_and_test_issue
     REPORT_URL: >-
-      https://cypresstestresults.s3.amazonaws.com/2019-06-27_07-50_all_should_be_updated/mochawesome.html
+      https://cypresstestresults.s3.amazonaws.com/2019-06-27_07-55_start_server_and_test_issue/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,7 +16,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> all_should_be_updated
+      - echo this is last commitMessage ==> start_server_and_test_issue
   build:
     commands:
       - npm run build
@@ -25,16 +25,16 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://admin-ui-tests-bucket/reports/dev-admin-ui/2019-06-27_07-50_all_should_be_updated
+        s3://admin-ui-tests-bucket/reports/dev-admin-ui/2019-06-27_07-55_start_server_and_test_issue
         --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-east-1:213585113823:cypressTestBuildNotification
         --subject "Admin-UI CodeBuild Tests
-        2019-06-27_07-50_all_should_be_updated" --message "Admin-UI CodeBuild
-        tests have completed for last commit message : all_should_be_updated .
-        Follow link here to report results : 
-        https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/2019-06-27_07-50_all_should_be_updated/mochawesome.html"
+        2019-06-27_07-55_start_server_and_test_issue" --message "Admin-UI
+        CodeBuild tests have completed for last commit message :
+        start_server_and_test_issue . Follow link here to report results : 
+        https://admin-ui-tests-bucket.s3.amazonaws.com/reports/dev-admin-ui/2019-06-27_07-55_start_server_and_test_issue/mochawesome.html"
 artifacts:
   files:
     - index.html
