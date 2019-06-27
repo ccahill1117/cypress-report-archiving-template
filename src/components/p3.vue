@@ -22,6 +22,36 @@
       </v-card-text>
     </v-card>
   </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.3 - Next navigate to the bucket permissions tab and unblock all public access.</p>
+        <img src="img/Screen Shot 2019-06-27 at 2.55.51 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>3.4 - Then, navigate to the Bucket Policy and use the following policy, replacing YOURBUCKETNAME with the name of the bucket you created. This will allow public read-only access to the bucket.</p>
+        <code>
+          {
+              "Version": "2012-10-17",
+              "Statement": [
+                  {
+                      "Sid": "AddPerm",
+                      "Effect": "Allow",
+                      "Principal": "*",
+                      "Action": "s3:GetObject",
+                      "Resource": "arn:aws:s3:::YOURBUCKETNAME/*"
+                  }
+              ]
+          }
+        </code>
+        <img src="img/Screen Shot 2019-06-27 at 2.58.10 PM.png" class=walkthroughPix>        
+      </v-card-text>
+    </v-card>
+  </div>
 </div>
 </template>
 
