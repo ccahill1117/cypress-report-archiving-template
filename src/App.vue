@@ -16,7 +16,7 @@
             <v-list-tile-title>Outline</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="" href="/#/pre-1">
+        <v-list-tile @click="" href="/#/pre1">
           <v-list-tile-action>
             <v-icon>format_list_numbered_rtl</v-icon>
           </v-list-tile-action>
@@ -90,6 +90,7 @@ import p0 from './components/p0'
 import p1 from './components/p1'
 import p2 from './components/p2'
 import p3 from './components/p3'
+import pre1 from './components/pre1'
 
 export default {
   name: 'App',
@@ -97,7 +98,8 @@ export default {
     p0,
     p1,
     p2,
-    p3
+    p3,
+    pre1
   },
   data () {
     return {

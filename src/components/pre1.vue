@@ -4,7 +4,6 @@
     <v-card>
       <v-card-text class="p0card">
         <p>Basic structure of, and how to use this template ....</p>
-        
       </v-card-text>
     </v-card>
   </div>

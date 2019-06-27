@@ -4,6 +4,7 @@ import p0 from './components/p0'
 import p1 from './components/p1'
 import p2 from './components/p2'
 import p3 from './components/p3'
+import pre1 from './components/pre1'
 
 Vue.use(Router)
 
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'hello',
       component: p0
+    },
+    {
+      path: '/pre1',
+      name: 'githubWebhooks',
+      component: pre1
     },
     {
       path: '/p1',
