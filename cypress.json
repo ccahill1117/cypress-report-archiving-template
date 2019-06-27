@@ -1,0 +1,11 @@
+{ "projectId": "Cypress reporting template",
+    "viewportWidth": 1280,
+    "viewportHeight": 800,
+    "video": false,
+    "reporterOptions": {
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  }
+  
