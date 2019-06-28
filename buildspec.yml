@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-28_13-34_cleanup_script
+    DESTINATION: 2019-06-28_13-40_changing_up_tests
     REPORT_URL: >-
-      https://testresultscypress.s3.amazonaws.com/2019-06-28_13-34_cleanup_script/mochawesome.html
+      https://testresultscypress.s3.amazonaws.com/2019-06-28_13-40_changing_up_tests/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,7 +16,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> cleanup_script
+      - echo this is last commitMessage ==> changing_up_tests
   build:
     commands:
       - npm run build
@@ -25,14 +25,14 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://testresultscypress/2019-06-28_13-34_cleanup_script --recursive
+        s3://testresultscypress/2019-06-28_13-40_changing_up_tests --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests 2019-06-28_13-34_cleanup_script" --message "CodeBuild
-        tests have completed for last commit message : cleanup_script . Follow
-        link here to report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-06-28_13-34_cleanup_script/mochawesome.html"
+        "CodeBuild Tests 2019-06-28_13-40_changing_up_tests" --message
+        "CodeBuild tests have completed for last commit message :
+        changing_up_tests . Follow link here to report results : 
+        https://testresultscypress.s3.amazonaws.com/2019-06-28_13-40_changing_up_tests/mochawesome.html"
 artifacts:
   files:
     - index.html
