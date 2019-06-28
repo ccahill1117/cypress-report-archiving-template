@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-28_13-01_env_var_experiment
+    DESTINATION: 2019-06-28_13-04_env_var_experiment
     REPORT_URL: >-
-      https://testresultscypress.s3.amazonaws.com/2019-06-28_13-01_env_var_experiment/mochawesome.html
+      https://testresultscypress.s3.amazonaws.com/2019-06-28_13-04_env_var_experiment/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -25,14 +25,14 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://testresultscypress/2019-06-28_13-01_env_var_experiment --recursive
+        s3://testresultscypress/2019-06-28_13-04_env_var_experiment --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests 2019-06-28_13-01_env_var_experiment" --message
+        "CodeBuild Tests 2019-06-28_13-04_env_var_experiment" --message
         "CodeBuild tests have completed for last commit message :
         env_var_experiment . Follow link here to report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-06-28_13-01_env_var_experiment/mochawesome.html"
+        https://testresultscypress.s3.amazonaws.com/2019-06-28_13-04_env_var_experiment/mochawesome.html"
 artifacts:
   files:
     - index.html
