@@ -25,6 +25,14 @@
       </v-card-text>
     </v-card>
   </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>6.4 - As shown in the screenshot below, you can update your environment variables here -- in this example I have named them EMAIL and PASS.</p>
+        <img src="img/Screen Shot 2019-06-28 at 1.26.21 PM.png" class=walkthroughPix>
+      </v-card-text>
+    </v-card>
+  </div>
 
   
 </div>
@@ -35,6 +43,9 @@ export default {
   name: 'p1',
   props: {
     msg: String
+  },
+  methods: {
+    
   }
 }
 </script>
