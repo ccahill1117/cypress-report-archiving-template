@@ -56,12 +56,12 @@
             <v-list-tile-title>Creating A Service Role</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+        <v-list-tile @click="" href="/#/p5">
           <v-list-tile-action>
             <v-icon>people_outline</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>About!</v-list-tile-title>
+            <v-list-tile-title>CloudFront, SSL, Route 53 Revisited</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">
