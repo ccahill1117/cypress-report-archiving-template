@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-27_23-35_create_sec_5_almost_done_with_4
+    DESTINATION: 2019-06-28_00-25_sec_4_done
     REPORT_URL: >-
-      https://testresultscypress.s3.amazonaws.com/2019-06-27_23-35_create_sec_5_almost_done_with_4/mochawesome.html
+      https://testresultscypress.s3.amazonaws.com/2019-06-28_00-25_sec_4_done/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,7 +16,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> create_sec_5_almost_done_with_4
+      - echo this is last commitMessage ==> sec_4_done
   build:
     commands:
       - npm run build
@@ -25,15 +25,14 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://testresultscypress/2019-06-27_23-35_create_sec_5_almost_done_with_4
-        --recursive
+        s3://testresultscypress/2019-06-28_00-25_sec_4_done --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests 2019-06-27_23-35_create_sec_5_almost_done_with_4"
-        --message "CodeBuild tests have completed for last commit message :
-        create_sec_5_almost_done_with_4 . Follow link here to report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-06-27_23-35_create_sec_5_almost_done_with_4/mochawesome.html"
+        "CodeBuild Tests 2019-06-28_00-25_sec_4_done" --message "CodeBuild tests
+        have completed for last commit message : sec_4_done . Follow link here
+        to report results : 
+        https://testresultscypress.s3.amazonaws.com/2019-06-28_00-25_sec_4_done/mochawesome.html"
 artifacts:
   files:
     - index.html

@@ -27,6 +27,13 @@
       </v-card-text>
     </v-card>
   </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>One note - sometimes the left-hand navigation drawer disappears permanently if you open up the console or make the view-width too narrow. That's a bug I'm working on 😅.</p>
+      </v-card-text>
+    </v-card>
+  </div>
 </div>
 </template>
 
