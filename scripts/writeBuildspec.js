@@ -2,9 +2,12 @@ const yaml = require('write-yaml')
 const moment = require('moment')
 const theDate = moment().format('YYYY-MM-DD_HH-mm')
 const commitMsg = process.argv[2].split(' ').join('_')
+//commit message comes from $ npm run git "commitMessage"
 const destinationURL = theDate + "_" + commitMsg
 const testResultsBucket = 'testresultscypress'
+//add the name of bucket you want above this line!!
 const snsTopic = 'arn:aws:sns:us-west-2:422539116740:cypressnotification'
+//add the name of your SNS topic above this line!! 
 const reportURL = `https://${testResultsBucket}.s3.amazonaws.com/${theDate+"_"+commitMsg}/mochawesome.html`
 
 
@@ -58,6 +61,8 @@ var data = {
 yaml('buildspec.yml', data, function(err) {
   //if you want to add err msg, etc you can do so here...
 });
+
+process.env.FILENAME = destinationURL
 
 require('simple-git') ()
     .add('./*')
