@@ -62,8 +62,6 @@ yaml('buildspec.yml', data, function(err) {
   //if you want to add err msg, etc you can do so here...
 });
 
-console.log(process.env.FILENAME)
-
 require('simple-git') ()
     .add('./*')
     .add('./buildspec.yml')
