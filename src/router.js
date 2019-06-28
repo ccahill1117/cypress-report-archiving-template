@@ -6,6 +6,7 @@ import p2 from './components/p2'
 import p3 from './components/p3'
 import pre1 from './components/pre1'
 import p4 from './components/p4'
+import p5 from './components/p5'
 
 Vue.use(Router)
 
@@ -13,33 +14,38 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'hello',
+      name: 'landing',
       component: p0
     },
     {
       path: '/pre1',
-      name: 'githubWebhooks',
+      name: 'pre section 1',
       component: pre1
     },
     {
       path: '/p1',
-      name: 'githubWebhooks',
+      name: 'section 1',
       component: p1
     },
     {
       path: '/p2',
-      name: 's3',
+      name: 'section 2',
       component: p2
     },
     {
       path: '/p3',
-      name: 's3',
+      name: 'section 3',
       component: p3
     },
     {
       path: '/p4',
-      name: 's3',
+      name: 'section 4',
       component: p4
+    },
+    {
+      path: '/p5',
+      name: 'section 5',
+      component: p5
     }
   ]
 })

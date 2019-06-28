@@ -84,7 +84,11 @@
   <div>
     <v-card>
       <v-card-text class="p0card">
-        <p>4.9 - Next, </p>
+        <p>4.9 - Now, if you make changes to this repository, save those changes and run <code>$ npm run git "SOME COMMIT MESSAGE"</code>, then navigate to the AWS CodePipeline for the pipeline we have created, you should see something that looks very similar to the image below.</p>
+        <img src="img/Screen Shot 2019-06-27 at 11.09.26 PM.png" class=walkthroughPix>
+        <p></p>
+        <p></p>
+
       </v-card-text>
     </v-card>
   </div>
