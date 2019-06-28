@@ -9,6 +9,22 @@
       </v-card-text>
     </v-card>
   </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>6.2 - Scroll down the "Environment" section, and click the "Edit" button on the right.</p>
+        <img src="img/Screen Shot 2019-06-28 at 12.39.22 PM.png" class=walkthroughPix>
+      </v-card-text>
+    </v-card>
+  </div>
+  <div>
+    <v-card>
+      <v-card-text class="p0card">
+        <p>6.3 - On the next screen, click the expand arrow next to "Additional configuration" and scroll down to Environment variables.</p>
+        <img src="img/Screen Shot 2019-06-28 at 12.39.22 PM.png" class=walkthroughPix>
+      </v-card-text>
+    </v-card>
+  </div>
 
   
 </div>

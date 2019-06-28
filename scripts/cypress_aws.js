@@ -3,9 +3,9 @@ const marge = require('mochawesome-report-generator')
 const { merge } = require('mochawesome-merge')
 const fse = require('fs-extra') 
 
-let user = process.argv[2]
-let pass = process.argv[3]
-let theDate = process.argv[4] 
+let title = process.argv[2] 
+let user = process.argv[3]
+let pass = process.argv[4]
 
 options = {
   reporter: "mochawesome",
@@ -14,7 +14,7 @@ options = {
     html: false,
     overwrite: false,
     json: true,
-    reportTitle: theDate 
+    reportTitle: title 
   },
   reportDir: "mochawesome-report",
   env: {
