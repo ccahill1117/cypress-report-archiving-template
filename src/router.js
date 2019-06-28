@@ -5,6 +5,7 @@ import p1 from './components/p1'
 import p2 from './components/p2'
 import p3 from './components/p3'
 import pre1 from './components/pre1'
+import p4 from './components/p4'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/p3',
       name: 's3',
       component: p3
+    },
+    {
+      path: '/p4',
+      name: 's3',
+      component: p4
     }
   ]
 })
