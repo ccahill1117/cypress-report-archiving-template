@@ -7,6 +7,7 @@ import p3 from './components/p3'
 import pre1 from './components/pre1'
 import p4 from './components/p4'
 import p5 from './components/p5'
+import p6 from './components/p6'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/p5',
       name: 'section 5',
       component: p5
+    },
+    {
+      path: '/p6',
+      name: 'section 6',
+      component: p6
     }
   ]
 })

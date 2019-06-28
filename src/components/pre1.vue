@@ -3,8 +3,9 @@
   <div>
     <v-card>
       <v-card-text class="p0card">
-        <p>This template and walkthrough can help you launch a basic web application and running cypess tests in the AWS CodeBuild environment.</p>
+        <p>This template and walkthrough can help you launch a basic web application and run cypess E2E tests in the AWS CodeBuild environment.</p>
         <p>Additionally, this repository uses some custom scripting (scripts/writeBuildspec.js) which programmatically generates a new buildspec.yml file in the root directory everytime a user runs the command <code>$ npm run git "YOUR COMMIT MESSAGE HERE"</code>, where you put your commit message in quotes.</p>
+        <p>Following along with this walkthrough will show a user how to set up a simple AWS CodePipeline, triggered by pushing new code to the master branch of the repository.</p>
       </v-card-text>
     </v-card>
   </div>

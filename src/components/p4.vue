@@ -109,7 +109,7 @@
         <p></p>
         <p>Hopefully, all of that worked. Of course, if it did not, something odd could have happened somewhere. While developing this walkthrough, I had a few issues with buildLogs and artifiacts not going where they need to go. There might be some trial and error involved.</p>
         <p>Assuming everything worked for you -- you can now push your code to GitHub, trigger your CodeBuild, run Cypress E2E tests in the CodeBuild environment, merge tests into a single HTML report, export tests to a pre-determined directory in a test results S3 bucket, and send an e-mail to topic subscribers which includes a hyperlink to the test results!</p>
-        <p>In the next section, we will go over using CloudFront CDN service to deploy our built web application and include an SSL certificate so that we can use HTTPS protocol.</p>
+        <p>In the next section, we will use CloudFront CDN service to deploy the built web application and include an SSL certificate so that we can use HTTPS protocol.</p>
       </v-card-text>
     </v-card>
   </div>

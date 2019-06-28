@@ -64,6 +64,14 @@
             <v-list-tile-title>CloudFront, SSL, Route 53 Revisited</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile @click="" href="/#/p6">
+          <v-list-tile-action>
+            <v-icon>people_outline</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Environment variables</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
         <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>person_add</v-icon>
@@ -101,6 +109,7 @@ import p3 from './components/p3'
 import pre1 from './components/pre1'
 import p4 from './components/p4'
 import p5 from './components/p5'
+import p6 from './components/p6'
 
 export default {
   name: 'App',
@@ -111,7 +120,8 @@ export default {
     p3,
     pre1,
     p4,
-    p5
+    p5,
+    p6
   },
   data () {
     return {
