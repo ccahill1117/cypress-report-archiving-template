@@ -110,6 +110,7 @@ import pre1 from './components/pre1'
 import p4 from './components/p4'
 import p5 from './components/p5'
 import p6 from './components/p6'
+import testPage from './components/testPage'
 
 export default {
   name: 'App',
@@ -121,7 +122,9 @@ export default {
     pre1,
     p4,
     p5,
-    p6
+    p6,
+    testPage
+
   },
   data () {
     return {

@@ -1,9 +1,10 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-06-28_13-40_changing_up_tests
+    DESTINATION: >-
+      2019-06-29_11-17_running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs
     REPORT_URL: >-
-      https://testresultscypress.s3.amazonaws.com/2019-06-28_13-40_changing_up_tests/mochawesome.html
+      https://testresultscypress.s3.amazonaws.com/2019-06-29_11-17_running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,7 +17,9 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> changing_up_tests
+      - >-
+        echo this is last commitMessage ==>
+        running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs
   build:
     commands:
       - npm run build
@@ -25,14 +28,17 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://testresultscypress/2019-06-28_13-40_changing_up_tests --recursive
+        s3://testresultscypress/2019-06-29_11-17_running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs
+        --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests 2019-06-28_13-40_changing_up_tests" --message
-        "CodeBuild tests have completed for last commit message :
-        changing_up_tests . Follow link here to report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-06-28_13-40_changing_up_tests/mochawesome.html"
+        "CodeBuild Tests
+        2019-06-29_11-17_running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs"
+        --message "CodeBuild tests have completed for last commit message :
+        running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs
+        . Follow link here to report results : 
+        https://testresultscypress.s3.amazonaws.com/2019-06-29_11-17_running_headless_testing_does_not_reveal_env_varaibles_in_report_or_logs/mochawesome.html"
 artifacts:
   files:
     - index.html

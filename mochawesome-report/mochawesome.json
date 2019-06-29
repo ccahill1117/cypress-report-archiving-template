@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-06-29T18:15:53.626Z",
+    "end": "2019-06-29T18:15:55.969Z",
+    "duration": 2343,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "e4b64b32-d26f-4efa-b3cf-4c5c7f07abd6",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "ebb305f1-957e-4bce-9474-17cb1563b126",
+        "title": "just testing",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "will just test a few basic things...",
+            "fullTitle": "just testing will just test a few basic things...",
+            "duration": 1007,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var userName = Cypress.env('USERNAME');\nvar pass = Cypress.env('PASSWORD');\ncy.visit('localhost:8080');\ncy.get('[data-cy=v-container]');\ncy.log(userName);\ncy.log(pass);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "1c7eed60-daf7-498a-bcca-a10cd627d72a",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "1c7eed60-daf7-498a-bcca-a10cd627d72a"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 1007,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
