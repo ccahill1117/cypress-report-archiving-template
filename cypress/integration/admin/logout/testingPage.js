@@ -10,10 +10,13 @@ describe('just testing', function() {
       .type(pass)
     cy.get('[data-cy=userField]')
       .type(userName)
+    cy.get('[data-cy=testSubmit]')
+      .click()
     
     cy.get('[data-cy=typedUserName]').contains(userName)
-
     cy.get('[data-cy=typedPassword]').contains(pass)
+
+    cy.get('[data-cy=submitResult]').contains("you won")
 
 
   })

@@ -9,6 +9,7 @@ import p4 from './components/p4'
 import p5 from './components/p5'
 import p6 from './components/p6'
 import testPage from './components/testPage'
+import contact from './components/contact'
 
 Vue.use(Router)
 
@@ -56,8 +57,13 @@ export default new Router({
     },
     {
       path: '/testPage',
-      name: 'section 7',
+      name: 'test',
       component: testPage
+    },
+    {
+      path: '/contact',
+      name: 'contact page',
+      component: contact
     }
   ]
 })

@@ -2,15 +2,13 @@
 <div>
   <v-form>
     <v-container>
-
       <v-text-field data-cy=userField v-model=testPageDataUserName label="user">
       </v-text-field>
-
       <v-text-field data-cy=passField v-model=testPageDataPassword label="password">
       </v-text-field>
-
     </v-container>
   </v-form>
+  <v-btn dark @click="checkFields()" data-cy="testSubmit">Submit</v-btn>
 
   <v-card>
       <v-card-text class="p0card">
@@ -21,6 +19,11 @@
       <v-card-text class="p0card">
         <p data-cy="typedPassword">{{testPageDataPassword}}</p>
       </v-card-text>
+  </v-card>
+  <v-card>
+    <v-card-title primary-title data-cy="submitResult">
+      {{targetTitle}}
+    </v-card-title>
   </v-card>
   
   
@@ -34,12 +37,17 @@ export default {
   data () {
     return {
       testPageDataUserName: '',    
-      testPageDataPassword: ''
+      testPageDataPassword: '',
+      targetTitle: ''
     }
   },
 
   methods: {
-       
+    checkFields: function() {
+      if (this.testPageDataUserName == "me@me.com" && this.testPageDataPassword == "pa55w0rd") {
+        this.targetTitle = "you won"
+      }
+    }
   }
 }
 </script>

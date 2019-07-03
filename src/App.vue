@@ -72,7 +72,7 @@
             <v-list-tile-title>Environment variables</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+        <v-list-tile @click="" href="/#/contact">
           <v-list-tile-action>
             <v-icon>person_add</v-icon>
           </v-list-tile-action>
@@ -111,6 +111,7 @@ import p4 from './components/p4'
 import p5 from './components/p5'
 import p6 from './components/p6'
 import testPage from './components/testPage'
+import contact from './components/contact'
 
 export default {
   name: 'App',
@@ -123,7 +124,8 @@ export default {
     p4,
     p5,
     p6,
-    testPage
+    testPage,
+    contact
 
   },
   data () {
