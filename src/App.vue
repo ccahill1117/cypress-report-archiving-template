@@ -112,6 +112,7 @@ import p5 from './components/p5'
 import p6 from './components/p6'
 import testPage from './components/testPage'
 import contact from './components/contact'
+import p7 from './components/p7'
 
 export default {
   name: 'App',
@@ -125,7 +126,8 @@ export default {
     p5,
     p6,
     testPage,
-    contact
+    contact,
+    p7
 
   },
   data () {
