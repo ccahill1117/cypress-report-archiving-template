@@ -64,7 +64,6 @@
         <p></p>
         <p>In this way, you can run individual tests in the test runner with the <code>cypress.open</code> and all your tests at once and print out tests results in a report folder with the <code>cypress.run</code> command!</p>
         <p>This can be really useful in getting tests configured and running as you would like them to be, before pushing your code to GitHub.</p>
-
       </v-card-text>
     </v-card>
   </div>

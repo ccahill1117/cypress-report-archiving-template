@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-07-10_13-03_unignore_cypress_local_and_add_more_to_section_6
+    DESTINATION: 2019-07-10_13-04_save_6
     REPORT_URL: >-
-      https://testresultscypress.s3.amazonaws.com/2019-07-10_13-03_unignore_cypress_local_and_add_more_to_section_6/mochawesome.html
+      https://testresultscypress.s3.amazonaws.com/2019-07-10_13-04_save_6/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,9 +16,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - >-
-        echo this is last commitMessage ==>
-        unignore_cypress_local_and_add_more_to_section_6
+      - echo this is last commitMessage ==> save_6
   build:
     commands:
       - npm run build
@@ -27,17 +25,14 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://testresultscypress/2019-07-10_13-03_unignore_cypress_local_and_add_more_to_section_6
-        --recursive
+        s3://testresultscypress/2019-07-10_13-04_save_6 --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests
-        2019-07-10_13-03_unignore_cypress_local_and_add_more_to_section_6"
-        --message "CodeBuild tests have completed for last commit message :
-        unignore_cypress_local_and_add_more_to_section_6 . Follow link here to
+        "CodeBuild Tests 2019-07-10_13-04_save_6" --message "CodeBuild tests
+        have completed for last commit message : save_6 . Follow link here to
         report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-07-10_13-03_unignore_cypress_local_and_add_more_to_section_6/mochawesome.html"
+        https://testresultscypress.s3.amazonaws.com/2019-07-10_13-04_save_6/mochawesome.html"
 artifacts:
   files:
     - index.html
