@@ -24,6 +24,8 @@
 *  "mochawesome-merge": "^1.0.7"
 *  "mochawesome-report-generator": "^3.1.5"
 *  "start-server-and-test": "^1.9.0"
+*  "write-yaml": "^1.0.0"
+*  "simple-git": "^1.116.0"
 
 ## Further work/improvements :
 
@@ -41,4 +43,34 @@ $ npm run serve
 
 ```
 
-### 
+### Run example tests locally, with Cypress test runner
+
+*  First, serve your application (at port 8080) with 
+``` 
+$ npm run serve
+```
+*  Next, navigate to scripts/cypress_local.js, make sure line 32 reads, 
+```
+cypress.open(options).then(
+```
+* Finally, type the following into the command line,
+```
+npm run cy:run me@me.com pa55w0rd
+```
+*  The test runner should appear momentarily.
+
+### Run example tests locally, with headless test runner
+
+*  First, serve your application (at port 8080) with 
+``` 
+$ npm run serve
+```
+*  Next, navigate to scripts/cypress_local.js, make sure line 32 reads, 
+```
+cypress.run(options).then(
+```
+* Finally, type the following into the command line,
+```
+npm run cy:run me@me.com pa55w0rd
+```
+*  The tests should run in the terminal and a mochawesome-report folder with your test report should appear in your root directory.

@@ -29,7 +29,7 @@ function generateReport(options) {
 //actual script
 
 fse.emptyDir("mochawesome-report")
-cypress.open(options).then(
+cypress.run(options).then(
   () => {
     generateReport(options)
   },
