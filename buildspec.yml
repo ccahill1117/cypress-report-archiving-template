@@ -1,9 +1,9 @@
 version: 0.2
 env:
   variables:
-    DESTINATION: 2019-07-04_07-32_add_p7
+    DESTINATION: 2019-07-10_11-01_update
     REPORT_URL: >-
-      https://testresultscypress.s3.amazonaws.com/2019-07-04_07-32_add_p7/mochawesome.html
+      https://testresultscypress.s3.amazonaws.com/2019-07-10_11-01_update/mochawesome.html
 phases:
   install:
     runtime-versions:
@@ -16,7 +16,7 @@ phases:
       - >-
         apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3
         libxss1 libasound2 xvfb
-      - echo this is last commitMessage ==> add_p7
+      - echo this is last commitMessage ==> update
   build:
     commands:
       - npm run build
@@ -25,14 +25,14 @@ phases:
       - npm run ci
       - >-
         aws s3 mv mochawesome-report
-        s3://testresultscypress/2019-07-04_07-32_add_p7 --recursive
+        s3://testresultscypress/2019-07-10_11-01_update --recursive
       - >-
         aws sns publish --topic-arn
         arn:aws:sns:us-west-2:422539116740:cypressnotification --subject
-        "CodeBuild Tests 2019-07-04_07-32_add_p7" --message "CodeBuild tests
-        have completed for last commit message : add_p7 . Follow link here to
+        "CodeBuild Tests 2019-07-10_11-01_update" --message "CodeBuild tests
+        have completed for last commit message : update . Follow link here to
         report results : 
-        https://testresultscypress.s3.amazonaws.com/2019-07-04_07-32_add_p7/mochawesome.html"
+        https://testresultscypress.s3.amazonaws.com/2019-07-10_11-01_update/mochawesome.html"
 artifacts:
   files:
     - index.html

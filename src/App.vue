@@ -50,7 +50,7 @@
         </v-list-tile>
         <v-list-tile @click="" href="/#/p4">
           <v-list-tile-action>
-            <v-icon>people_outline</v-icon>
+            <v-icon>note_add</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Creating A Service Role</v-list-tile-title>
@@ -58,7 +58,7 @@
         </v-list-tile>
         <v-list-tile @click="" href="/#/p5">
           <v-list-tile-action>
-            <v-icon>people_outline</v-icon>
+            <v-icon>shop_two</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>CloudFront, SSL, Route 53 Revisited</v-list-tile-title>
@@ -66,7 +66,7 @@
         </v-list-tile>
         <v-list-tile @click="" href="/#/p6">
           <v-list-tile-action>
-            <v-icon>people_outline</v-icon>
+            <v-icon>input</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Environment variables</v-list-tile-title>
