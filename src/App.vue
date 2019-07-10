@@ -69,9 +69,17 @@
             <v-icon>input</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Environment variables</v-list-tile-title>
+            <v-list-tile-title>Environment Variables</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <!-- <v-list-tile @click="" href="/#/p7">
+          <v-list-tile-action>
+            <v-icon>assignment_turned_in</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Quick Use Guide</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile> -->
         <v-list-tile @click="" href="/#/contact">
           <v-list-tile-action>
             <v-icon>person_add</v-icon>

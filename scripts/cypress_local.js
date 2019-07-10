@@ -4,8 +4,7 @@ const { merge } = require('mochawesome-merge')
 const fse = require('fs-extra') 
 
 let user = process.argv[2]
-let pass = process.argv[3] 
-
+let pass = process.argv[3]
 
 options = {
   reporter: "mochawesome",
@@ -14,7 +13,7 @@ options = {
     html: false,
     overwrite: false,
     json: true,
-    // reportTitle: title 
+    // reportTitle: theDate 
   },
   reportDir: "mochawesome-report",
   env: {
@@ -30,7 +29,7 @@ function generateReport(options) {
 //actual script
 
 fse.emptyDir("mochawesome-report")
-cypress.run(options).then(
+cypress.open(options).then(
   () => {
     generateReport(options)
   },
